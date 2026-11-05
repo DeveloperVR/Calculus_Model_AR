@@ -18,7 +18,11 @@ public class MultipleImagesTrackingManager : MonoBehaviour
     private void Start()
     {
         _trackedImageManager = GetComponent<ARTrackedImageManager>();
-        if(_trackedImageManager == null) return;
+        if (_trackedImageManager == null)
+        {
+            Debug.LogError("ARTrackedImageManager no encontrado en este GameObject.");
+            return;
+        }
         _arObjects = new Dictionary<string, GameObject>();
         _trackedImageManager.trackablesChanged.AddListener(OnImagesTrackedChanged);
         SetUpElements();

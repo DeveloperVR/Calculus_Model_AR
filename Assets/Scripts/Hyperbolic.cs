@@ -5,9 +5,14 @@ public class Hyperbolic : ARinteractableObject
 {
     private Animator _animator;
 
-    private void Onable()
+    private void Awake()
     {
-        _animator = GetComponent<Animator>();       
+        _animator = GetComponent<Animator>();
+
+        if (_animator == null)
+        {
+            Debug.LogError("No se encontró animator en" + gameObject.name);
+        }
     }
 
     protected override void SetState(State state)
@@ -20,7 +25,7 @@ public class Hyperbolic : ARinteractableObject
                 Debug.Log("TriggerActivado");
                 break;
             case State.Idle:
-                _animator.SetTrigger("GoToIdLe");
+                _animator.SetTrigger("GoToIdle");
                 Debug.Log("TriggerDesactivado");
                 break;
         }

@@ -33,6 +33,7 @@ public abstract class ARinteractableObject : MonoBehaviour
     protected void AddInteractable (ARinteractableObject interactuable)
     {
         _interactables.Add(interactuable);
+        Debug.Log("Objeto" + interactuable.name + "añadido");
         SetState(State.Active);
     }
 

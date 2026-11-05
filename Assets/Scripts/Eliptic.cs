@@ -5,9 +5,14 @@ public class Eliptic : ARinteractableObject
 {
     private Animator _animator;
 
-    private void Onable()
+    private void Awake()
     {
-        _animator = GetComponent<Animator>();       
+        _animator = GetComponent<Animator>();
+
+        if (_animator == null)
+        {
+            Debug.LogError("No se encontró animator en" + gameObject.name);
+        } 
     }
 
     protected override void SetState(State state)
