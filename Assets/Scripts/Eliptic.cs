@@ -17,7 +17,15 @@ public class Eliptic : ARinteractableObject
 
     protected override void SetState(State state)
     {
+
+        Debug.Log($"{gameObject.name} cambia al estado: {state}");
         base.SetState(state);
+
+        if (_animator == null)
+        {
+            Debug.LogError("Animator no encontrado");
+            return;
+        }
         switch(state)
         {
             case State.Active:

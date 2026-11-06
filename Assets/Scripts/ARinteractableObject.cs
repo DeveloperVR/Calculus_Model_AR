@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using System.Xml.Serialization;
-using Unity.VisualScripting;
-using UnityEditor.XR.ARKit;
 using UnityEngine;
 
 public abstract class ARinteractableObject : MonoBehaviour
@@ -14,7 +11,7 @@ public abstract class ARinteractableObject : MonoBehaviour
 
     protected State ARObjectState = State.Idle;
 
-    private void OTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if(other.TryGetComponent<ARinteractableObject>(out var interactable))
         {
@@ -22,7 +19,7 @@ public abstract class ARinteractableObject : MonoBehaviour
         }
     }
 
-    private void OTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if(other.TryGetComponent<ARinteractableObject>(out var interactable))
         {

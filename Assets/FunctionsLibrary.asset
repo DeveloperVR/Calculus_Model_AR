@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: FunctionsLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5723925465987977627
+  m_GuidHigh: 9111181316515174294
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5384658411410851549
+      m_GuidHigh: 11305911737366516869
+    m_SerializedTextureGuid:
+      m_GuidLow: 18438928964906993144
+      m_GuidHigh: 942002516121356376
+    m_Size: {x: 0.094, y: 0.07848845}
+    m_SpecifySize: 1
+    m_Name: Hiperbolico
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4959822455971999865
+      m_GuidHigh: 746236856011894442
+    m_SerializedTextureGuid:
+      m_GuidLow: 15268430646076706380
+      m_GuidHigh: 5736901237675655754
+    m_Size: {x: 0.04, y: 0.036}
+    m_SpecifySize: 1
+    m_Name: Eliptico
+    m_Texture: {fileID: 0}

@@ -23,13 +23,15 @@ public class MultipleImagesTrackingManager : MonoBehaviour
             Debug.LogError("ARTrackedImageManager no encontrado en este GameObject.");
             return;
         }
+        Debug.Log("Reference Library: " + _trackedImageManager.referenceLibrary);
+
         _arObjects = new Dictionary<string, GameObject>();
         _trackedImageManager.trackablesChanged.AddListener(OnImagesTrackedChanged);
         SetUpElements();
 
     }
 
-    private void ODestroy()
+    private void OnDestroy()
     {
         _trackedImageManager.trackablesChanged.RemoveListener(OnImagesTrackedChanged);
     }
@@ -59,7 +61,7 @@ public class MultipleImagesTrackingManager : MonoBehaviour
 
         foreach(var trackedImage in eventArgs.removed)
         {
-            UpdateTrackedImages(trackedImage.Value);
+            UpdateTrackedImages(trackedImage.Value);    
         }
     }
 
